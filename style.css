@@ -151,4 +151,13 @@ footer p {
     max-width: 250px; /* Ajusta el ancho máximo aquí */
     text-align: center; /* Centra el texto dentro del botón */
 }
-
+.flayer video {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+.carrusel {
+    max-width: 50%;
+    margin: 0 auto;
+}

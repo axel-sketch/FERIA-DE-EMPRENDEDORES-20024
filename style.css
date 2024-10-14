@@ -1,7 +1,6 @@
-* {
-    box-sizing: border-box;
-}
-
+ * {
+    box-sizing: border-box; /* Asegura que el padding y el border no afecten el ancho de los elementos */
+} 
 html, body {
     height: 100%;
     margin: 0;
@@ -10,15 +9,18 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to right, #b6fbff, #83a4d4); /* Fondo suave con degradado */
-    font-family: 'Open Sans', sans-serif; /* Nueva fuente */
-    font-size: 16px;
-    color: #333; /* Color del texto */
 }
-
 body p {
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+body {
+    
+
+    background: #83a4d4;  
+    background: -webkit-linear-gradient(to right, #b6fbff, #83a4d4); 
+    background: linear-gradient(to right, #b6fbff, #83a4d4); 
 }
 
 header {
@@ -26,63 +28,91 @@ header {
     display: flex;
     flex-direction: column;
     margin: 0;
-    padding: 10px 0; /* Añade espacio alrededor del contenido */
+    padding: 0;
+}
+h4{margin: 20px;
+    display:flex;
+    flex-direction: column
+}
+h4{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    align-items: center;
+}
+.boton {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Para que los botones se acomoden en varias filas si son muchos */
+    gap: 10px; /* Espacio entre los botones */
 }
 
+h2{
+    margin: 20px;
+    display:flex;
+    flex-direction: column
+}
+h2{ margin: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+text-align: center;
+}
+
+.barra{
+    width: 100%;
+    height: 3px;
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    
+}
 .logo {
     width: 50px;
     height: auto;
 }
 
-h2, h4 {
-    font-family: 'Lato', sans-serif; /* Cambia las fuentes de los títulos */
-    margin: 20px;
-    text-align: center;
-    letter-spacing: 1.5px;
-    color: #ffffff; /* Color de los títulos */
+main {
+    flex: 1; /* Permite que el main ocupe el espacio restante */
+    padding: 1rem; /* Añade algo de espacio alrededor del contenido */
 }
-
-.boton {
+main p{ text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 10px;
+}
+.lugar {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
+    align-items: center;
 }
 
-.barra {
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(to top, #434343, #000000);
+.lugar iframe {
+    border-radius: 5%;
+    width: 100%; 
+    margin: 10px;
+    max-width: 600px; 
+    height: 400px; 
 }
-
-main {
+.introducion h6{
     flex: 1;
-    padding: 2rem;
+    padding: 1rem ;
+    margin-top: 10px;
     text-align: center;
 }
-
-main p {
-    font-size: 1.2rem; /* Ajusta el tamaño de la fuente */
-    line-height: 1.6; /* Mejora la legibilidad */
-    margin: 20px auto;
-    max-width: 800px; /* Limita el ancho del contenido */
-}
-
 img {
-    display: block;
-    margin: 20px auto;
-    width: 60%; /* Ajusta el tamaño de la imagen */
-    height: auto;
-    border-radius: 15px; /* Bordes más suaves */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade sombra */
+    display: block;         /* Para que la imagen se trate como un bloque */
+    margin: 20px auto;      /* Centrar la imagen horizontalmente */
+    width: 50%;             /* Ajusta el tamaño de la imagen (50% del ancho del contenedor) */
+    height: auto;           /* Mantiene la proporción de la imagen */
 }
+
 
 .introducion p {
-    font-family: 'Roboto Slab', serif;
-    font-size: 1.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: x-large;
     padding: 3%;
-    margin: 10px auto;
-    text-align: center;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    text-align: center; /* Esto centrará el texto */
+    
 }
 
 .unca {
@@ -90,89 +120,61 @@ img {
     justify-content: center;
     align-items: center;
 }
-
 .unca img {
     width: 20%;
     height: auto;
-    margin: 10px;
+    margin: 10px; /* Añade margen si quieres separación entre las imágenes */
 }
-
 .carrusel {
-    max-width: 70%;
-    margin: 0 auto;
+    max-width: 50%; /* Ajusta el ancho del carrusel */
+    margin: 0 auto; /* Centra el carrusel */
 }
 
-.lugar {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    margin: 20px 0; /* Espacio arriba y abajo del mapa */
-}
 
-.lugar iframe {
-    border-radius: 5%;
-    width: 100%; 
-    max-width: 600px; /* Asegura que el mapa no exceda este ancho */
-    height: 400px; 
-}
-
-.botones {
-    display: flex;
-    flex-direction: column; /* Alinea los botones en columna */
-    align-items: center; /* Centra los botones horizontalmente */
-}
-
-.botones a {
-    margin: 10px 0; /* Espacio entre botones */
-    padding: 15px 30px; /* Tamaño de los botones */
-    font-size: 1.2rem; /* Tamaño de la fuente */
-    border-radius: 5px; /* Bordes redondeados */
-    width: 100%; /* Para que ocupen todo el ancho del contenedor */
-    max-width: 250px; /* Ajusta el ancho máximo aquí */
-    text-align: center; /* Centra el texto dentro del botón */
-}
-
-.flayer {
-    display: flex; /* Usa flexbox para centrar */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    flex-wrap: wrap; /* Permite que las imágenes se ajusten en varias filas */
-    gap: 10px; /* Espacio entre las imágenes */
-    margin: 20px 0; /* Margen superior e inferior */
-}
-
-.flayer img {
-    max-width: 150px; /* Ajusta el ancho máximo de las imágenes */
-    height: auto; /* Mantiene la proporción de las imágenes */
-    border-radius: 10px; /* Bordes redondeados opcionales */
-}
-
-.flayer video {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-footer {
-    margin-top: auto;
+footer {margin-top: auto;
     text-align: center;
-    padding: 20px;
-    background-color: #222;
-    color: #eee;
+    padding: 10px;
+    background-color: #343a40; /* Color de fondo del footer */
+    color: white; /* Asegura que el footer esté al final */
 }
 
 footer p {
-    font-size: 0.9rem;
-    color: #ccc;
+    color: white;
+}
+.botones a {
+    display: block;
+    margin: 10px auto; /* Centra los botones */
+    width: 50%; /* Ajusta el tamaño de los botones */
+
+}
+#carousel-buttons a {
+    margin-top: 10px;
+    display: inline-block;
 }
 
-@media (max-width: 768px) {
-    main {
-        padding: 1rem;
+
+
+@media (max-width: 768px) 
+ .navbar-collapse {
+        position: fixed; /* Cambiado a fixed para que se deslice */
+        top: 0;
+    }
+    .flayer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Centra horizontalmente las imágenes */
+        align-items: center; /* Alinea verticalmente las imágenes */
+        gap: 10px; /* Espacio entre las imágenes */
     }
     
-    img {
-        width: 80%;
+    .flayer img {
+        max-width: 500px; /* Ajusta el tamaño máximo de las imágenes */
+        height: auto;
+        border-radius: 10px; /* Bordes redondeados opcionales */
     }
-}
+    .flayer video {
+        max-width: 100%; /* El video ocupará el 100% del ancho disponible */
+        height: auto; /* Mantendrá la proporción del video */
+        border-radius: 10px; /* Opcional: bordes redondeados */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opcional: sombra alrededor del video */
+    }

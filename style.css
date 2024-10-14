@@ -152,10 +152,20 @@ footer p {
     text-align: center; /* Centra el texto dentro del botón */
 }
 .flayer {
-    display: flex; /* Usa flexbox para centrar el contenido */
-    justify-content: center; /* Centra el video horizontalmente */
-    align-items: center; /* Centra el video verticalmente */
+    display: flex; /* Usa flexbox para el alineamiento */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    align-items: center; /* Centra las imágenes verticalmente */
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten en varias filas */
+    gap: 10px; /* Espacio entre las imágenes */
     margin: 20px 0; /* Margen superior e inferior */
+}
+
+.flayer img {
+    max-width: 100%; /* Ajusta el ancho máximo de las imágenes */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    border-radius: 10px; /* Bordes redondeados opcionales */
+    width: 150px; /* Ajusta el ancho de las imágenes según sea necesario */
+    height: auto; /* Mantiene la proporción de las imágenes */
 }
 
 .flayer video {

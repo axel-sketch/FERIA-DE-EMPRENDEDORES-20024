@@ -154,15 +154,24 @@ footer p {
 .flayer {
     display: flex; /* Usa flexbox para centrar el contenido */
     justify-content: center; /* Centra el video horizontalmente */
-    align-items: center; /* Centra el video verticalmente si es necesario */
-    margin: 20px 0; /* Añade un margen superior e inferior */
+    align-items: center; /* Centra el video verticalmente */
+    margin: 20px 0; /* Margen superior e inferior */
 }
 
 .flayer video {
     max-width: 100%; /* Ajusta el video al 100% del ancho del contenedor */
     height: auto; /* Mantiene la proporción del video */
-    border-radius: 10px; /* Opcional: bordes redondeados */
+    border-radius: 10px; /* Bordes redondeados opcionales */
 }
+
+/* Asegúrate que el contenedor principal tenga un ancho definido */
+body, main {
+    width: 100%; /* Asegura que el body y el main ocupen el 100% del ancho */
+    display: flex; /* Flexbox para alinear elementos si es necesario */
+    flex-direction: column; /* Dirección vertical */
+    align-items: center; /* Alineación centrada de los elementos hijos */
+}
+
 
 .carrusel {
     max-width: 50%;

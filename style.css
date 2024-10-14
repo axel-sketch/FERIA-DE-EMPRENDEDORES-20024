@@ -11,7 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     background: linear-gradient(to right, #b6fbff, #83a4d4); /* Fondo suave con degradado */
-  font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif; /* Nueva fuente */
     font-size: 16px;
     color: #333; /* Color del texto */
 }
@@ -28,9 +28,10 @@ header {
     margin: 0;
     padding: 10px 0; /* Añade espacio alrededor del contenido */
 }
-.logo{
+
+.logo {
     width: 50px;
-    height:auto ;
+    height: auto;
 }
 
 h2, h4 {
@@ -101,6 +102,58 @@ img {
     margin: 0 auto;
 }
 
+.lugar {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin: 20px 0; /* Espacio arriba y abajo del mapa */
+}
+
+.lugar iframe {
+    border-radius: 5%;
+    width: 100%; 
+    max-width: 600px; /* Asegura que el mapa no exceda este ancho */
+    height: 400px; 
+}
+
+.botones {
+    display: flex;
+    flex-direction: column; /* Alinea los botones en columna */
+    align-items: center; /* Centra los botones horizontalmente */
+}
+
+.botones a {
+    margin: 10px 0; /* Espacio entre botones */
+    padding: 15px 30px; /* Tamaño de los botones */
+    font-size: 1.2rem; /* Tamaño de la fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    width: 100%; /* Para que ocupen todo el ancho del contenedor */
+    max-width: 250px; /* Ajusta el ancho máximo aquí */
+    text-align: center; /* Centra el texto dentro del botón */
+}
+
+.flayer {
+    display: flex; /* Usa flexbox para centrar */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten en varias filas */
+    gap: 10px; /* Espacio entre las imágenes */
+    margin: 20px 0; /* Margen superior e inferior */
+}
+
+.flayer img {
+    max-width: 150px; /* Ajusta el ancho máximo de las imágenes */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    border-radius: 10px; /* Bordes redondeados opcionales */
+}
+
+.flayer video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 footer {
     margin-top: auto;
     text-align: center;
@@ -122,68 +175,4 @@ footer p {
     img {
         width: 80%;
     }
-}
-.lugar {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    margin: 20px 0; /* Espacio arriba y abajo del mapa */
-}
-
-.lugar iframe {
-    border-radius: 5%;
-    width: 100%; 
-    max-width: 600px; /* Asegura que el mapa no exceda este ancho */
-    height: 400px; 
-}
-.botones {
-    display: flex;
-    flex-direction: column; /* Alinea los botones en columna */
-    align-items: center; /* Centra los botones horizontalmente */
-}
-
-.botones a {
-    margin: 10px 0; /* Espacio entre botones */
-    padding: 15px 30px; /* Tamaño de los botones */
-    font-size: 1.2rem; /* Tamaño de la fuente */
-    border-radius: 5px; /* Bordes redondeados */
-    width: 100%; /* Para que ocupen todo el ancho del contenedor */
-    max-width: 250px; /* Ajusta el ancho máximo aquí */
-    text-align: center; /* Centra el texto dentro del botón */
-}
-.flayer {
-    display: flex; /* Usa flexbox para el alineamiento */
-    justify-content: center; /* Centra las imágenes horizontalmente */
-    align-items: center; /* Centra las imágenes verticalmente */
-    flex-wrap: wrap; /* Permite que las imágenes se ajusten en varias filas */
-    gap: 10px; /* Espacio entre las imágenes */
-    margin: 20px 0; /* Margen superior e inferior */
-}
-
-.flayer img {
-    max-width: 100%; /* Ajusta el ancho máximo de las imágenes */
-    height: auto; /* Mantiene la proporción de las imágenes */
-    border-radius: 10px; /* Bordes redondeados opcionales */
-    width: 150px; /* Ajusta el ancho de las imágenes según sea necesario */
-    height: auto; /* Mantiene la proporción de las imágenes */
-}
-
-.flayer video {
-    max-width: 100%; /* Ajusta el video al 100% del ancho del contenedor */
-    height: auto; /* Mantiene la proporción del video */
-    border-radius: 10px; /* Bordes redondeados opcionales */
-}
-
-/* Asegúrate que el contenedor principal tenga un ancho definido */
-body, main {
-    width: 100%; /* Asegura que el body y el main ocupen el 100% del ancho */
-    display: flex; /* Flexbox para alinear elementos si es necesario */
-    flex-direction: column; /* Dirección vertical */
-    align-items: center; /* Alineación centrada de los elementos hijos */
-}
-
-
-.carrusel {
-    max-width: 50%;
-    margin: 0 auto;
 }

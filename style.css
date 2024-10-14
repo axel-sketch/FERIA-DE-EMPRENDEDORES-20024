@@ -30,7 +30,7 @@ header {
 }
 .logo{
     width: 50px;
-    height: ;
+    height:auto ;
 }
 
 h2, h4 {
@@ -136,3 +136,12 @@ footer p {
     max-width: 600px; /* Asegura que el mapa no exceda este ancho */
     height: 400px; 
 }
+.botones {
+    display: flex;              /* Utiliza flexbox */
+    flex-direction: column;     /* Coloca los botones en una columna */
+    justify-content: center;    /* Centra verticalmente los botones */
+    align-items: center;        /* Centra horizontalmente los botones */
+    height: 100%;               /* Asegúrate de que ocupe el 100% de la altura disponible */
+    margin: auto;               /* Centra el contenedor en el medio */
+}
+

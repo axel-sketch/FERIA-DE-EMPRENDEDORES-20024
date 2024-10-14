@@ -1,6 +1,7 @@
 * {
-    box-sizing: border-box; /* Asegura que el padding y el border no afecten el ancho de los elementos */
+    box-sizing: border-box;
 } 
+
 html, body {
     height: 100%;
     margin: 0;
@@ -9,18 +10,14 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb); 
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
 }
+
 body p {
     margin-top: 5px;
     margin-bottom: 5px;
-}
-
-body {
-    
-
-    background: #83a4d4;  
-    background: -webkit-linear-gradient(to right, #b6fbff, #83a4d4); 
-    background: linear-gradient(to right, #b6fbff, #83a4d4); 
 }
 
 header {
@@ -30,54 +27,45 @@ header {
     margin: 0;
     padding: 0;
 }
-h4{margin: 20px;
-    display:flex;
-    flex-direction: column
-}
-h4{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
-    align-items: center;
+h4, h2 {
+    margin: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
 }
+
 .boton {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Para que los botones se acomoden en varias filas si son muchos */
-    gap: 10px; /* Espacio entre los botones */
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-h2{
-    margin: 20px;
-    display:flex;
-    flex-direction: column
-}
-h2{ margin: 10px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-text-align: center;
-}
-
-.barra{
+.barra {
     width: 100%;
     height: 3px;
-    background: #000000;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-    
+    background: linear-gradient(to top, #434343, #000000);
 }
+
 .logo {
     width: 50px;
     height: auto;
 }
 
 main {
-    flex: 1; /* Permite que el main ocupe el espacio restante */
-    padding: 1rem; /* Añade algo de espacio alrededor del contenido */
+    flex: 1;
+    padding: 1rem;
 }
-main p{ text-align: center;
+
+main p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-top: 10px;
+    text-align: center;
 }
+
 .lugar {
     display: flex;
     justify-content: center;
@@ -91,28 +79,23 @@ main p{ text-align: center;
     max-width: 600px; 
     height: 400px; 
 }
-.introducion h6{
-    flex: 1;
-    padding: 1rem ;
-    margin-top: 10px;
-    text-align: center;
-}
-img {
-    display: block;         /* Para que la imagen se trate como un bloque */
-    margin: 20px auto;      /* Centrar la imagen horizontalmente */
-    width: 50%;             /* Ajusta el tamaño de la imagen (50% del ancho del contenedor) */
-    height: auto;           /* Mantiene la proporción de la imagen */
-}
 
+img {
+    display: block;
+    margin: 20px auto;
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
 .introducion p {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Impact', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: x-large;
     padding: 3%;
     margin-top: 4px;
     margin-bottom: 4px;
-    text-align: center; /* Esto centrará el texto */
-    
+    text-align: center;
 }
 
 .unca {
@@ -120,62 +103,66 @@ img {
     justify-content: center;
     align-items: center;
 }
+
 .unca img {
     width: 20%;
     height: auto;
-    margin: 10px; /* Añade margen si quieres separación entre las imágenes */
+    margin: 10px;
 }
+
 .carrusel {
-    max-width: 50%; /* Ajusta el ancho del carrusel */
-    margin: 0 auto; /* Centra el carrusel */
+    max-width: 50%;
+    margin: 0 auto;
 }
 
-
-footer {margin-top: auto;
+footer {
+    margin-top: auto;
     text-align: center;
     padding: 10px;
-    background-color: #343a40; /* Color de fondo del footer */
-    color: white; /* Asegura que el footer esté al final */
+    background-color: #222;
+    color: #eee;
+    font-size: 14px;
 }
 
 footer p {
     color: white;
 }
+
 .botones a {
     display: block;
-    margin: 10px auto; /* Centra los botones */
-    width: 50%; /* Ajusta el tamaño de los botones */
-
+    margin: 10px auto;
+    width: 50%;
 }
+
 #carousel-buttons a {
     margin-top: 10px;
     display: inline-block;
 }
 
-
-
-@media (max-width: 768px) 
- .navbar-collapse {
-        position: fixed; /* Cambiado a fixed para que se deslice */
+@media (max-width: 768px) {
+    .navbar-collapse {
+        position: fixed;
         top: 0;
     }
+
     .flayer {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center; /* Centra horizontalmente las imágenes */
-        align-items: center; /* Alinea verticalmente las imágenes */
-        gap: 10px; /* Espacio entre las imágenes */
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
     }
     
     .flayer img {
-        max-width: 500px; /* Ajusta el tamaño máximo de las imágenes */
-       max-height: 700PX;
-        
-        border-radius: 10px; /* Bordes redondeados opcionales */
+        max-width: 500px;
+        height: auto;
+        border-radius: 10px;
     }
+
     .flayer video {
-        max-width: 100%; /* El video ocupará el 100% del ancho disponible */
-        height: auto; /* Mantendrá la proporción del video */
-        border-radius: 10px; /* Opcional: bordes redondeados */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opcional: sombra alrededor del video */
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
+}

@@ -151,12 +151,19 @@ footer p {
     max-width: 250px; /* Ajusta el ancho máximo aquí */
     text-align: center; /* Centra el texto dentro del botón */
 }
+.flayer {
+    display: flex; /* Usa flexbox para centrar el contenido */
+    justify-content: center; /* Centra el video horizontalmente */
+    align-items: center; /* Centra el video verticalmente si es necesario */
+    margin: 20px 0; /* Añade un margen superior e inferior */
+}
+
 .flayer video {
-        max-width: 100%;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
+    max-width: 100%; /* Ajusta el video al 100% del ancho del contenedor */
+    height: auto; /* Mantiene la proporción del video */
+    border-radius: 10px; /* Opcional: bordes redondeados */
+}
+
 .carrusel {
     max-width: 50%;
     margin: 0 auto;

@@ -137,11 +137,18 @@ footer p {
     height: 400px; 
 }
 .botones {
-    display: flex;              /* Utiliza flexbox */
-    flex-direction: column;     /* Coloca los botones en una columna */
-    justify-content: center;    /* Centra verticalmente los botones */
-    align-items: center;        /* Centra horizontalmente los botones */
-    height: 100%;               /* Asegúrate de que ocupe el 100% de la altura disponible */
-    margin: auto;               /* Centra el contenedor en el medio */
+    display: flex;
+    flex-direction: column; /* Alinea los botones en columna */
+    align-items: center; /* Centra los botones horizontalmente */
+}
+
+.botones a {
+    margin: 10px 0; /* Espacio entre botones */
+    padding: 15px 30px; /* Tamaño de los botones */
+    font-size: 1.2rem; /* Tamaño de la fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    width: 100%; /* Para que ocupen todo el ancho del contenedor */
+    max-width: 250px; /* Ajusta el ancho máximo aquí */
+    text-align: center; /* Centra el texto dentro del botón */
 }
 

@@ -11,7 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     background: linear-gradient(to right, #b6fbff, #83a4d4); /* Fondo suave con degradado */
-    font-family: 'Open Sans', sans-serif; /* Nueva fuente */
+  font-family: 'Lato', sans-serif;
     font-size: 16px;
     color: #333; /* Color del texto */
 }

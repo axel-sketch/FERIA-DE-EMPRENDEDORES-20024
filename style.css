@@ -1,4 +1,4 @@
- * {
+* {
     box-sizing: border-box; /* Asegura que el padding y el border no afecten el ancho de los elementos */
 } 
 html, body {
@@ -18,9 +18,14 @@ body p {
 body {
     
 
-    background: #83a4d4;  
-    background: -webkit-linear-gradient(to right, #b6fbff, #83a4d4); 
-    background: linear-gradient(to right, #b6fbff, #83a4d4); 
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, #b6fbff, #83a4d4);
+    font-family: 'Roboto', sans-serif; /* Cambia a una fuente más moderna */
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify; 
 }
 
 header {
@@ -29,15 +34,18 @@ header {
     flex-direction: column;
     margin: 0;
     padding: 0;
+    font-family: 'Lato', sans-serif; 
 }
 h4{margin: 20px;
     display:flex;
     flex-direction: column
 }
-h4{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
-    align-items: center;
+h2, h4 {
+    font-family: 'Lato', sans-serif; /* Fuente moderna para los títulos */
+    margin: 20px;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1.5px;
 }
 .boton {
     display: flex;
@@ -46,15 +54,7 @@ h4{
     gap: 10px; /* Espacio entre los botones */
 }
 
-h2{
-    margin: 20px;
-    display:flex;
-    flex-direction: column
-}
-h2{ margin: 10px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-text-align: center;
-}
+
 
 .barra{
     width: 100%;
@@ -85,11 +85,11 @@ main p{ text-align: center;
 }
 
 .lugar iframe {
-    border-radius: 5%;
-    width: 100%; 
-    margin: 10px;
-    max-width: 600px; 
-    height: 400px; 
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .introducion h6{
     flex: 1;
@@ -98,19 +98,21 @@ main p{ text-align: center;
     text-align: center;
 }
 img {
-    display: block;         /* Para que la imagen se trate como un bloque */
-    margin: 20px auto;      /* Centrar la imagen horizontalmente */
-    width: 50%;             /* Ajusta el tamaño de la imagen (50% del ancho del contenedor) */
-    height: auto;           /* Mantiene la proporción de la imagen */
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 
 .introducion p {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: x-large;
-    padding: 3%;
-    margin-top: 4px;
-    margin-bottom: 4px;
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    padding: 2%;
+    text-align: justify; /* Texto justificado */
+    margin-top: 10px;
+    margin-bottom: 10px;
     text-align: center; /* Esto centrará el texto */
     
 }
@@ -131,22 +133,35 @@ img {
 }
 
 
-footer {margin-top: auto;
+footer {
     text-align: center;
-    padding: 10px;
-    background-color: #343a40; /* Color de fondo del footer */
-    color: white; /* Asegura que el footer esté al final */
+    padding: 20px;
+    background-color: #222;
+    color: white;
 }
 
 footer p {
+    font-size: 1rem;
     color: white;
 }
 .botones a {
     display: block;
-    margin: 10px auto; /* Centra los botones */
-    width: 50%; /* Ajusta el tamaño de los botones */
-
+    margin: 10px auto;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #434343;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
+
+.botones a:hover {
+    background-color: #000;
+}
+
+
 #carousel-buttons a {
     margin-top: 10px;
     display: inline-block;
@@ -178,3 +193,4 @@ footer p {
         border-radius: 10px; /* Opcional: bordes redondeados */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opcional: sombra alrededor del video */
     }
+    

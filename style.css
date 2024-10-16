@@ -193,7 +193,7 @@ footer p {
         border-radius: 10px; /* Opcional: bordes redondeados */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opcional: sombra alrededor del video */
     }
-     @media (max-width: 768px) {
+    @media (max-width: 768px) {
         .flayer img {
             max-width: 100%; /* Se asegura de que las imágenes no excedan el ancho de la pantalla */
         }
@@ -202,3 +202,4 @@ footer p {
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Más sombra para destacar */
         border: 2px solid #ccc; /* Borde ligero */
     }
+        
